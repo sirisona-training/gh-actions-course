@@ -1,12 +1,23 @@
-name: My workflow
+name: 01 - Building Blocks
+
 on: push
 
 jobs:
-    my-first-job:
-      runs-on: ubuntu-latest
-      steps:
-        - run: echo "Hello World"
-    my-second-job:
-      runs-on: ubuntu-latest
-      steps:
-        - run: echo "Bye World"
+    echo-hello:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Say hello
+              run: echo "Hello world!"
+    echo-goodbye:
+        runs-on: ubuntu-latest
+        steps:
+            - name: successful step
+              run:  |
+               echo "I will succeed"
+               exit 0
+            - name: Say goodbye
+              run: echo "Goodbye!" 
+
+
+
+
