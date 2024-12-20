@@ -1,10 +1,7 @@
 name: My first workflow
 on: 
-  push:
-  pull_request:
-  schedule:
-    - cron: '*/5 * * * *'
-  workflow_dispatch:  
+  workflow_dispatch:
+ 
 
 jobs:
     my-first-job:
