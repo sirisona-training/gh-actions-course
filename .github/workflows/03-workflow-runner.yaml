@@ -17,4 +17,12 @@ jobs:
               shell: bash
               run: |
                 echo "This job is running on Window runner"
-                echo "Runner OS: $RUNNER_OS"        
+                echo "Runner OS: $RUNNER_OS"
+    macOS-runner-echo:
+        runs-on: macOS-latest
+        steps:
+            - name: Show OS
+              run: |
+                echo "This job is running on macOS runner"
+                echo "Runner OS: $RUNNER_OS"
+                
