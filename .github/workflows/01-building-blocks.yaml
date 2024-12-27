@@ -15,8 +15,8 @@ jobs:
               run:  |
                echo "I will succeed"
                exit 0
-            - name: Say goodbye
-              run: echo "Goodbye!" 
+            - name: Say good bye
+              run: echo "Good bye!" 
 
 
 
