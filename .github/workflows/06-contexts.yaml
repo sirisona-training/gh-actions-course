@@ -8,14 +8,14 @@ on:
                 type: boolean
                 default: false
 env:
-  MY_WORKFLOW_VAR: "workflow"
-  MY_OVERWRITTEN_VAR: "Overwritten workflow"                
+    MY_WORKFLOW_VAR: "workflow"
+    MY_OVERWRITTEN_VAR: "Overwritten workflow"                
 
 jobs:
     echo-data:
         runs-on: ubuntu-latest
         env:
-          MY_WORKFLOW_VAR: 'job'
+          MY_JOB_VAR: 'job'
           MY_OVERWRITTEN_VAR: 'job'
 
         steps:
@@ -31,13 +31,17 @@ jobs:
             - name: Retreive Variable
               run: |
                 echo "Variable value: ${{ vars.My_VAR }}"
-            - name: print env variable
+            - name: print env1 variable
               env:
                 MY_OVERWRITTEN_VAR: 'steps'
               run: |
-                echo "Workflow env: ${{ env.MY_WORKFLOW_VAR }}"
-                echo " workflow overwitten: ${{ env.MY_OVERWRITTEN_VAR }}"
-            - name: print env variable
+                echo "Workflow env1: ${{ env.MY_WORKFLOW_VAR }}"
+                echo "Overwitten env1: ${{ env.MY_OVERWRITTEN_VAR }}"
+            - name: print env2 variable
               run: |
-                  echo "Workflow env: ${{ env.MY_WORKFLOW_VAR }}"
-                  echo " workflow overwitten: ${{ env.MY_OVERWRITTEN_VAR }}"
+                  echo "Workflow env2: ${{ env.MY_JOB_VAR }}"
+                  echo "Overwitten env2: ${{ env.MY_OVERWRITTEN_VAR }}"
+            - name: print env3 variable
+              run: |
+                  echo "Workflow env3: ${{ env.MY_WORKFLOW_VAR }}"
+                  echo "Overwitten env3: ${{ env.MY_OVERWRITTEN_VAR }}"
