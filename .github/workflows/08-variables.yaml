@@ -52,4 +52,4 @@ jobs:
             - name: Print undefined variables
               run: |
                 echo "Org var : ${{ vars.ORG_VAR }}"
-                echo "Org Overwritten var : ${{ vars.UNDEFINED_VAR_WITH_DEFAULT }}"
+                echo "Org Overwritten var : ${{ env.UNDEFINED_VAR_WITH_DEFAULT }}"
