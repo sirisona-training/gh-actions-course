@@ -33,23 +33,23 @@ jobs:
         steps:
             - name: Print Variables
               run: |
-                echo "Org var : ${{ vars.ORG_VAR }}
-                echo "Org Overwritten var : ${{ vars.OVERWRITTEN_VAR}}
-                echo "Repo var: ${{ vars.REPOSITORY_VAR }}
+                echo "Org var : ${{ vars.ORG_VAR }}"
+                echo "Org Overwritten var : ${{ vars.OVERWRITTEN_VAR }}"
+                echo "Repo var: ${{ vars.REPOSITORY_VAR }}"
     echo-prod:
         runs-on: ubuntu-latest  
         environment: prod
         steps:
             - name: Print prod variables
               run: |
-                echo "Org var : ${{ vars.ORG_VAR }}
-                echo "Org Overwritten var : ${{ vars.OVERWRITTEN_VAR}}                
-                echo "Repo var: ${{ vars.REPOSITORY_VAR }}
-                echo "Env var: ${{ vars.TARGET_VAR }}
+                echo "Org var : ${{ vars.ORG_VAR }}"
+                echo "Org Overwritten var : ${{ vars.OVERWRITTEN_VAR }}"               
+                echo "Repo var: ${{ vars.REPOSITORY_VAR }}"
+                echo "Env var: ${{ vars.TARGET_VAR }}"
     echo-undefined:
         runs-on: ubuntu-latest  
         steps:
             - name: Print undefined variables
               run: |
-                echo "Org var : ${{ vars.ORG_VAR }}
-                echo "Org Overwritten var : ${{ vars.UNDEFINED_VAR_WITH_DEFAULT }}
+                echo "Org var : ${{ vars.ORG_VAR }}"
+                echo "Org Overwritten var : ${{ vars.UNDEFINED_VAR_WITH_DEFAULT }}"
