@@ -33,7 +33,9 @@ jobs:
                 node-version: ${{ inputs.node-version }}      
             # 2. Install dependencies
             - name: Installing Dependencies
-              run: npm ci              
+              run: |
+                npm i 
+                npm ci             
             # 3. Unit testing, building
             - name: Testing
               run: npm run test 
