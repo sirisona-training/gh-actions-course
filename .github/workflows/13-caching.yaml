@@ -47,8 +47,8 @@ jobs:
             # # 3. Unit testing, building
             # - name: Testing
             #   run: npm run test 
-            - name: Building
-              run: npm run build               
+            # - name: Building
+            #   run: npm run build               
             - name: Deploying to nonprod
               run:  echo " Deploying to nonprod "  
 
